@@ -1,0 +1,33 @@
+fields:
+    date:
+        label: Fecha
+        oc.commentPosition: ''
+        mode: date
+        span: auto
+        type: datepicker
+        format: Y/m/d
+    published:
+        label: Publicado
+        span: auto
+        type: switch
+    name:
+        label: Título
+        oc.commentPosition: ''
+        span: left
+        type: text
+    image:
+        label: Imagen
+        oc.commentPosition: ''
+        mode: image
+        useCaption: true
+        thumbOptions:
+            mode: crop
+            extension: auto
+        span: auto
+        type: fileupload
+    content:
+        label: Contenido
+        size: giant
+        oc.commentPosition: ''
+        span: left
+        type: richeditor

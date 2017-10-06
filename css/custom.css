@@ -1,0 +1,348 @@
+
+/************************************************
+ Bootstrap 3 Grid Breakpints (http://getbootstrap.com/css/#grid)
+
+ xs - Extra small devices 	< 768 px
+ sm - Small devices			< 992 px
+ md - Medium devices		< 1200 px
+ lg - Large devices			>= 1200 px
+
+************************************************/
+
+
+/***********************************************/
+/* Fonts                                       */
+/***********************************************/
+
+@font-face {
+    font-family: 'futuramedium';
+    src: url('fonts/futura-medium-webfont.woff2') format('woff2'),
+         url('fonts/futura-medium-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'futuramedium';
+    src: url('fonts/futura-mediumitalic-webfont.woff2') format('woff2'),
+         url('fonts/futura-mediumitalic-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: italic;
+}
+
+
+/***********************************************/
+/* General styles                              */
+/***********************************************/
+
+body { 
+	font-family: 'futuramedium', Arial, Helvetica, sans-serif;
+	-webkit-font-smoothing: antialiased;
+	color: #151B4E;
+	font-size: 17px;
+	font-weight: 300;
+}
+a {
+	text-decoration: none;
+	transition: all 0.15s ease-out;
+	color: inherit;
+}
+ /* on hover, select */
+a:hover, a:focus { 
+	color: #A0A09F;
+	text-decoration: none; 
+}
+/* on press */
+a:active {  
+	color: #A0A09F;
+	opacity: 0.8;
+	text-decoration: none; 
+}
+h1, h2, h3, h4, h5, h6 {
+	color: inherit;
+	font-weight: bold;
+}
+h2 {
+    font-size: 29px;
+}
+h5 {
+    font-size: 15px;
+}
+hr {
+	border-color: #404248;
+}
+
+
+/* loading */
+body.loading p,
+body.loading a,
+body.loading span,
+body.loading h1,
+body.loading h2,
+body.loading h3,
+body.loading h4,
+body.loading h5,
+body.loading > footer {
+	visibility: hidden;
+}
+
+
+
+/* mobile */
+@media screen and (max-width: 991px) {
+
+}
+
+/***********************************************/
+/* Overwritten Bootstrap Styles                */
+/***********************************************/
+
+.container {
+}
+.img-responsive {
+	display: inline-block;
+	margin-left: auto;
+	margin-right: auto;
+}
+.lead {
+	font-size: 17px;
+}
+
+.carousel-control {
+    opacity: 1;
+    width: auto;
+    display: flex;
+    align-items: center;
+}
+.carousel-control:active {  
+	opacity: 0.8;
+}
+.carousel-control.left {
+    background: none;
+}
+.carousel-control.right {
+    background: none;
+}
+
+
+
+
+/***********************************************/
+/* Forms                                       */
+/***********************************************/
+
+.form-control {
+    border-radius: 0;
+    border: none;
+}
+.form-group {
+    margin-bottom: 5px;
+}
+textarea.form-control {
+	height: 80px;
+}
+.btn {
+    border-radius: 0;
+    background-color: #3f4046;
+    color: #ffffff;
+	
+}
+
+/***********************************************/
+/* Components	               		           */
+/***********************************************/
+
+body > header {
+    position: fixed;
+    z-index: 50;
+    background-color: rgba(236, 233, 228, 1);
+    width: 100%;
+    height: 131px;
+} 
+body > header .container {
+    padding: 20px 40px 5px 53px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1600px;;;
+} 
+body > header .container::before, 
+body > header .container::after {
+	display: none;
+} 
+#logo {
+}
+#logo img {
+}
+
+body > header nav {
+    font-size: 13px;
+    margin-top: 5px;
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-weight: 400;;;;
+}
+body > header nav > a,
+body > header nav > span {;
+    margin-left: 20px;
+    position: relative;
+    z-index: 1;
+}
+body > header nav a.selected,
+body.page-home > header nav a.home,
+body.page-empresa > header nav a.empresa,
+body.page-novedades > header nav a.novedades,
+body.page-contacto > header nav a.contacto {
+	color: #A0A09F;
+}
+body > header nav span.lang {
+    margin-left: 25px;
+}
+body > header nav span.lang a {
+    margin-left: 12px;
+}
+body > header nav span.social img {
+    vertical-align: bottom;
+}
+body > header nav .submenu {
+	position: absolute;
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0s linear 0.35s, opacity 0.35s ease-out;
+	z-index: 0;
+    background-color: #ece9e4;
+    top: 14px;
+    left: 0;
+    margin-left: -30px;
+    padding: 30px 30px 10px 30px;
+}
+body > header nav span:hover .submenu,
+body > header nav span:focus .submenu,
+body > header nav span:active .submenu {
+    visibility: visible;
+	    opacity: 1;
+    transition-delay:0s;
+}
+body > header nav .submenu a {
+	display: block;
+	margin-left: 0;
+	white-space: nowrap;
+	margin-bottom: 15px;
+	min-width: 82px;;
+}
+
+#hamburger {
+    display: none;
+    z-index: 10;
+}
+#hamburger .slice {
+    border-radius: 2px;
+    display: block;
+    height: 4px;
+    width: 28px;
+    background-color: #151B4E;
+}
+#hamburger .slice + .slice {
+    margin-top: 4px;
+}
+
+body > main {
+	min-height: calc(100vh - 60px);
+	overflow: hidden;
+	padding-top: 131px;;
+}
+
+body > footer {
+	background-color: rgba(204, 204, 204, 0.7);
+	position: relative;
+	z-index: 2;
+	height: 60px;;
+} 
+
+
+
+
+.parallax-mask {
+	z-index: 1;
+	position: relative;
+	overflow: hidden;
+}
+
+
+
+@media screen and (max-width: 768px) {
+
+
+
+
+}
+@media screen and (max-width: 991px) {
+
+	#logo img {
+    height: 53px;
+	}
+
+	#hamburger {
+	    display: block;
+	    cursor: pointer;
+	}
+	body > header {
+		height: 80px;
+	}
+	body > header nav {
+	    visibility: hidden;
+	    opacity: 0;
+	    transition: visibility 0s linear 0.35s, opacity 0.35s ease-out;
+	    position: fixed;
+	    height: 100%;
+	    width: 100%;
+	    z-index: 14;
+	    left: 0;
+	    top: 71px;
+	    margin: 0;
+	    background: #ece9e4;
+	    padding-top: 20px;
+	}
+	body > header nav.expanded {
+		visibility: visible;
+  		opacity: 1;
+	    transition-delay:0s;
+	}
+	body > header .container {
+    	padding: 15px 25px;
+   	}
+	body > header nav a,
+	body > header nav span {
+		display: block;
+		text-align: center;
+		margin: 10px;
+		font-size: 22px;
+	}
+	body > header nav span {
+		
+	}
+	body > header nav span.lang a,
+	body > header nav span.social a {
+		display: inline-block;
+		margin: 0 7px;
+	}
+	body > header nav span .submenu {
+	    visibility: visible;
+  	    opacity: 1;
+	    transition-delay:0s;
+	    position: relative;
+	    margin: 0;
+	    padding: 0;
+	    top: auto;
+	    left: auto;
+	}
+	body > header nav .submenu a {
+		margin-bottom: 0;
+	}
+	
+	body > main {
+		min-height: calc(100vh - 60px);
+	}
+
+}
+

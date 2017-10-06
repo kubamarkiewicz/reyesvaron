@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+
+    <title>Reyes Varón</title>
+    <meta name="description" content="muy pronto / coming soon Reyes y Varón ahumados@reyesyvaron.com">
+    <base href="/2017/reyesvaron/www/">
+    <!-- <base href="/"> -->
+
+    <!-- Le styles -->
+    <link href="js/node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/custom.css" rel="stylesheet">
+    <link href="pages/home/home.css" rel="stylesheet">
+    <link href="pages/empresa/empresa.css" rel="stylesheet">
+    <link href="pages/contacto/contacto.css" rel="stylesheet">
+    <link href="pages/novedades/novedades.css" rel="stylesheet">
+
+	<link rel="icon" href="images/favicon.png">
+</head>
+<body class="page-home loading" ng-app="myApp">
+
+	<header>
+		<div class="container">
+			<a href="index.html" id="logo"><img src="images/logo.png" alt="Reyes Varón"></a>
+			<div id="hamburger">
+				<div class="slice"></div>
+				<div class="slice"></div>
+				<div class="slice"></div>
+			</div>
+			<nav>
+                <a href="index.html" class="home" translate="menu.home">HOME</a>
+				<a href="empresa" class="empresa" translate="menu.empresa">EMPRESA</a>
+                <a href="novedades" class="novedades" translate="menu.novedades">NOVEDADES</a>
+				<span class="productos">
+                    <span translate="menu.productos">PRODUCTOS</span>
+                    <span class="submenu">
+                        <a href="productos/salmon">SALMON</a>
+                        <a href="productos/tuba">TUNA</a>
+                    </span>
+                </span>
+                <a href="recetas" class="recetas" translate="menu.recetas">RECETAS</a>
+                <a href="contacto" class="contacto" translate="menu.contacto">CONTACTO</a>
+                <span class="social">
+                    <a href="#" target="_blank"><img src="images/social-linkedin.png" alt="LinkedIn"></a>
+                    <a href="#" target="_blank"><img src="images/social-facebook.png" alt="Facebook"></a>
+                </span>
+				<!-- <a href="test" class="test">.</a> -->
+<!-- 				<span class="lang">
+					<a href="" class="selected">ES</a>
+					<a href="">EN</a>
+				</span> -->
+			</nav>
+		</div>
+	</header>
+
+
+	<main ng-view autoscroll="true"></main>
+
+	
+	<footer>
+	</footer>
+
+
+
+	<!-- Le javascript -->
+    <!-- Placed at the end of the document so the pages load faster -->
+
+    <script src="js/node_modules/jquery/dist/jquery.min.js"></script>
+	<script src="js/node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="js/node_modules/angular/angular.min.js"></script>
+    <script src="js/node_modules/angular-route/angular-route.min.js"></script>
+    <script src="js/node_modules/angular-translate/dist/angular-translate.min.js"></script>
+    <script src="js/node_modules/angular-translate/dist/angular-translate-loader-static-files/angular-translate-loader-static-files.min.js"></script>
+    <script src="js/node_modules/angular-sanitize/angular-sanitize.min.js"></script>
+
+    <!-- Angular Application -->
+    <script src="js/config/api.js"></script>
+    <script src="js/app.js"></script>
+
+    <!-- Pages -->
+    <script src="pages/home/home-controller.js"></script>
+    <script src="pages/empresa/empresa-controller.js"></script>
+    <script src="pages/contacto/contacto-controller.js"></script>
+    <script src="pages/novedades/novedades-controller.js"></script>
+
+    <!-- Services -->
+
+    <!-- Other libraries -->
+    <!-- <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBEwVzElX56j4dCQh63N2ZQBLb4XpO08Eo"></script> -->
+
+
+</body>
+</html>

@@ -1,0 +1,17 @@
+{
+  "name": "my-awesome-package",
+  "description": "my-awesome-package",
+  "repository": "my-awesome-package",
+  "version": "1.0.0",
+  "dependencies": {
+    "angular": "^1.6.6",
+    "angular-route": "^1.6.6",
+    "angular-sanitize": "^1.6.6",
+    "angular-translate": "^2.15.2",
+    "bootstrap": "^3.3.7",
+    "jquery": "^3.2.1",
+    "three": "^0.87.1",
+    "three-obj-loader": "^1.1.2",
+    "three-window-resize": "^1.0.4"
+  }
+}

@@ -1,0 +1,6 @@
+plugin:
+    name: 'kubamarkiewicz.neotecman::lang.plugin.name'
+    description: 'kubamarkiewicz.neotecman::lang.plugin.description'
+    author: 'Kuba Markiewicz'
+    icon: oc-icon-circle-o
+    homepage: ''

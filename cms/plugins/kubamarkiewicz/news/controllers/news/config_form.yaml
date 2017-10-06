@@ -1,0 +1,11 @@
+name: News
+modelClass: KubaMarkiewicz\News\Models\News
+form: $/kubamarkiewicz/news/models/news/fields.yaml
+defaultRedirect: kubamarkiewicz/news/news
+create:
+    redirect: 'kubamarkiewicz/news/news/update/:id'
+    redirectClose: kubamarkiewicz/news/news
+update:
+    redirect: kubamarkiewicz/news/news
+    redirectClose: kubamarkiewicz/news/news
+preview: {  }

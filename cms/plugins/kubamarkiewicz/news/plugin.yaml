@@ -1,0 +1,12 @@
+plugin:
+    name: 'kubamarkiewicz.news::lang.plugin.name'
+    description: 'kubamarkiewicz.news::lang.plugin.description'
+    author: 'Kuba Markiewicz'
+    icon: oc-icon-newspaper-o
+    homepage: ''
+navigation:
+    main-menu-item2:
+        label: News
+        url: kubamarkiewicz/news/news
+        icon: icon-newspaper-o
+        order: '1'

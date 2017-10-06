@@ -1,0 +1,5 @@
+.DS_Store
+*.log
+storage/session/*
+storage/cms/*
+storage/framework/cache/*
