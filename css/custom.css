@@ -35,11 +35,11 @@
 /* General styles                              */
 /***********************************************/
 
-body { 
-	font-family: 'futuramedium', Arial, Helvetica, sans-serif;
+body {
 	-webkit-font-smoothing: antialiased;
 	color: #151B4E;
 	font-size: 17px;
+	font-family: 'futuramedium', Arial, Helvetica, sans-serif;
 	font-weight: 300;
 }
 a {
@@ -94,11 +94,18 @@ body.loading > footer {
 }
 
 /***********************************************/
-/* Overwritten Bootstrap Styles                */
+/* Layout divs                                 */
 /***********************************************/
 
 .container {
+	width: 100%;
+    max-width: 980px;
 }
+
+/***********************************************/
+/* Overwritten Bootstrap Styles                */
+/***********************************************/
+
 .img-responsive {
 	display: inline-block;
 	margin-left: auto;
@@ -119,11 +126,40 @@ body.loading > footer {
 }
 .carousel-control.left {
     background: none;
+    padding-left: 10px;
 }
 .carousel-control.right {
     background: none;
+    padding-right: 10px;
+}
+.carousel-control svg {
+	stroke: #ffffff;
+	transform: scale(0.75);
+}
+.carousel-control.right svg {
+	transform: scale(-0.75);
 }
 
+.carousel-indicators li {
+    width: 8px;
+    height: 8px;;;
+}
+.carousel-indicators .active {
+    width: 10px;
+    height: 10px;;;
+}
+
+.alert {
+	border-radius: 0;
+}
+
+@media screen and (min-width: 768px) {
+
+	.carousel-indicators {
+    	bottom: 0px;
+	}
+
+}
 
 
 
@@ -133,7 +169,10 @@ body.loading > footer {
 
 .form-control {
     border-radius: 0;
+    background-color: #f0f0f0;
+    box-shadow: none;
     border: none;
+    height: 38px;;;;
 }
 .form-group {
     margin-bottom: 5px;
@@ -143,9 +182,12 @@ textarea.form-control {
 }
 .btn {
     border-radius: 0;
-    background-color: #3f4046;
+    background-color: #151B4E;
     color: #ffffff;
-	
+}
+.btn.focus, .btn:focus, .btn:hover {
+	color: #ffffff;
+	opacity: 0.9;
 }
 
 /***********************************************/
@@ -180,11 +222,11 @@ body > header nav {
     font-size: 13px;
     margin-top: 5px;
     font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
-    font-weight: 400;;;;
+    font-weight: 400;
 }
 body > header nav > a,
 body > header nav > span {;
-    margin-left: 20px;
+    margin-left: 17px;
     position: relative;
     z-index: 1;
 }
@@ -249,7 +291,7 @@ body > header nav .submenu a {
 body > main {
 	min-height: calc(100vh - 60px);
 	overflow: hidden;
-	padding-top: 131px;;
+	padding-top: 131px;
 }
 
 body > footer {
@@ -279,7 +321,7 @@ body > footer {
 @media screen and (max-width: 991px) {
 
 	#logo img {
-    height: 53px;
+    	height: 53px;
 	}
 
 	#hamburger {
@@ -342,6 +384,7 @@ body > footer {
 	
 	body > main {
 		min-height: calc(100vh - 60px);
+		padding-top: 80px;
 	}
 
 }

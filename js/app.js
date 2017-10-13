@@ -37,18 +37,31 @@ app.config(['$translateProvider', function ($translateProvider) {
 
 // define custom handler
 app.factory('myCustomHandlerFactory', function () {
+    var called = [];
     return function (translationID) {
-        // console.log(translationID);
+        // use last element from code as default translation
+        var translation = translationID.substr(translationID.lastIndexOf(".") + 1);
+
         var element = $("[translate='" + translationID + "']");
-        $.post({
-            url     : 'cms/api/es/translations',
-            data    : {
-                code : translationID,
-                type : element.attr('translate-type'),
-                translation : element.html()
-            }
-        });
-        return element.html();
+        if (element && element.html()) {
+            translation = element.html();
+        }
+        
+        if (!called[translationID]) {
+            // call API
+            $.post({
+                url     : 'cms/api/es/translations',
+                data    : {
+                    code : translationID,
+                    type : element.attr('translate-type'),
+                    translation : translation
+                }
+            });
+        }
+        
+        called[translationID] = true;
+
+        return translation;
     };
 });
 

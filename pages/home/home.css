@@ -2,9 +2,75 @@
 section#home-piece {
 }
 
+#homeCarousel .item {
+	background-position: center center;
+	background-size: cover;
+	text-align: center;
+	color: #ffffff;
+	min-height: 358px;
+	height: calc(100vh - 200px);
+	padding-top: calc(50vh - 290px);
+	overflow: hidden;;
+}
+#homeCarousel .item .box {
+	background-color: rgba(0,0,0,0.35);
+	border: 4px solid #ffffff;
+	width: 800px;
+	max-width: 70%;
+	margin-right: auto;
+	margin-left: auto;
+	padding: 30px 10px 20px 10px;
+	position: relative;
+	margin-top: 10px;;
+}
+#homeCarousel .item .box img {
+	max-width: 90%;
+}
+#homeCarousel .item .box h2 {
+	letter-spacing: 0.15em;
+	font-weight: 600;
+	line-height: 130%;;;;
+}
+
+
+
+.home-big-product {
+	text-align: center;
+	padding: 180px 30px;
+	background-size: cover;
+	background-position: center center;
+}
+.home-big-product img {
+	max-width: 100%;
+}
+
+#home-salmon {
+	background-image: url(../../images/home/salmon-background.jpg);
+}
+
+#home-bacalao {
+	background-image: url(../../images/home/bacalao-background.jpg);
+}
+
+#home-atun {
+	background-image: url(../../images/home/atun-background.jpg);
+}
+
+
+.home-big-product-details {
+	background-position: center center;
+	background-size: cover;
+	height: 100vh;
+	margin: -20vh 0;
+}
+
+
 
 /* mobile */
 @media screen and (max-width: 991px) {
 
+	#homeCarousel .item .box h2 {
+		font-size: 20px;
+	}
 
 }
