@@ -1,5 +1,5 @@
 
-section#home-piece {
+section#home-slides {
 }
 
 #homeCarousel .item {
@@ -21,7 +21,7 @@ section#home-piece {
 	margin-left: auto;
 	padding: 30px 10px 20px 10px;
 	position: relative;
-	margin-top: 10px;;
+	margin-top: 10px;
 }
 #homeCarousel .item .box img {
 	max-width: 90%;
@@ -39,6 +39,7 @@ section#home-piece {
 	padding: 180px 30px;
 	background-size: cover;
 	background-position: center center;
+	background-repeat: repeat-y;
 }
 .home-big-product img {
 	max-width: 100%;
@@ -62,6 +63,48 @@ section#home-piece {
 	background-size: cover;
 	height: 100vh;
 	margin: -20vh 0;
+}
+
+
+#home-productos {
+	background-color: rgba(236, 233, 228, 1);
+	padding-top: 50px;
+	padding-bottom: 75px;;;;
+	
+}
+#home-productos h2 {
+	color: rgb(219, 216, 210);
+	font-size: 86px;
+	text-align: center;
+	letter-spacing: 0.2em;
+	margin-bottom: 40px;;;;;;;
+
+}
+#home-productos .boxes {
+
+}
+#home-productos .boxes > div {
+	padding-left: 7px;
+	padding-right: 7px;;;
+
+}
+#home-productos .boxes > div a {
+	display: flex;
+	background-color: #f3f2ee;
+	height: 140px;
+	margin-bottom: 74px;
+	flex-direction: column;align-items: center;
+	justify-content: space-evenly;
+	padding: 20px;
+	font-size: 22px;
+	font-weight: 200;;;
+
+}
+#home-productos .boxes > div a::after {
+	content: '';
+	border-bottom: 2px solid #fffffb;
+	width: 50px;
+	display: block;;
 }
 
 

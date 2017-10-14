@@ -2,7 +2,9 @@
 var app = angular.module("myApp", [
     "ngRoute",
     "ngSanitize",
-    'pascalprecht.translate'
+    'pascalprecht.translate',
+    'ParallaxService'
+    // 'angular-parallax'
 ]);
 
 // load configuration from files
@@ -160,7 +162,10 @@ app.run(function($rootScope, $sce, $http, $location) {
 
     });
 
-
+    // $(window).paroller(); 
+        // $(window).paroller(); 
+        // $("body > header").paroller({ factor: '0.5' });
+        // $(window).stellar();
 
 });
 
