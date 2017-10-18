@@ -18,7 +18,8 @@ app.constant('config', window.config);
 app.config(['$translateProvider', function ($translateProvider) {
 
     $.get({
-        url: 'cms/api/es/translations',
+        // url: 'cms/api/es/translations',
+        url: 'dummy-api/es/translations.json',
         async: false,
         contentType: "application/json",
         dataType: 'json',
@@ -28,8 +29,10 @@ app.config(['$translateProvider', function ($translateProvider) {
     });
     
     $translateProvider.useStaticFilesLoader({
-        prefix: 'cms/api/',
-        suffix: '/translations'
+        // prefix: 'cms/api/',
+        // suffix: '/translations'
+        prefix: 'dummy-api/',
+        suffix: '/translations.json'
     });
     $translateProvider.preferredLanguage('es');
     $translateProvider.useSanitizeValueStrategy(null);
@@ -49,7 +52,7 @@ app.factory('myCustomHandlerFactory', function () {
             translation = element.html();
         }
         
-        if (!called[translationID]) {
+/*        if (!called[translationID]) {
             // call API
             $.post({
                 url     : 'cms/api/es/translations',
@@ -59,7 +62,7 @@ app.factory('myCustomHandlerFactory', function () {
                     translation : translation
                 }
             });
-        }
+        }*/
         
         called[translationID] = true;
 
@@ -89,6 +92,10 @@ app.config(function ($routeProvider, $locationProvider) {
         .when('/novedades', { 
             controller: 'NovedadesController', 
             templateUrl: 'pages/novedades/index.html' 
+        })        
+        .when('/productos', { 
+            controller: 'ProductosController', 
+            templateUrl: 'pages/productos/index.html' 
         })    
         .otherwise({ 
             redirectTo: '/' 
@@ -162,10 +169,25 @@ app.run(function($rootScope, $sce, $http, $location) {
 
     });
 
-    // $(window).paroller(); 
-        // $(window).paroller(); 
-        // $("body > header").paroller({ factor: '0.5' });
-        // $(window).stellar();
+    $rootScope.closeMenu = function()
+    {
+        $('body > header nav').removeClass('expanded');
+    }
+
+
+
+    // load products
+    $rootScope.productsData = null;
+    
+    $http({
+        method  : 'GET',
+        url     : config.api.urls.getProducts
+    })
+    .then(function(response) {
+        $rootScope.productsData = response.data;
+    });
+
+
 
 });
 

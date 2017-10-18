@@ -1,0 +1,170 @@
+fields:
+    name:
+        label: Nombre del producto
+        oc.commentPosition: ''
+        span: left
+        type: text
+tabs:
+    fields:
+        image:
+            label: Imagen
+            oc.commentPosition: ''
+            mode: image
+            useCaption: true
+            thumbOptions:
+                mode: crop
+                extension: auto
+            span: auto
+            type: fileupload
+            tab: Informacion principal
+        description:
+            label: Descripción
+            size: large
+            oc.commentPosition: ''
+            span: auto
+            type: richeditor
+            tab: Informacion principal
+        image_1:
+            label: Imagen
+            oc.commentPosition: ''
+            mode: image
+            useCaption: true
+            thumbOptions:
+                mode: crop
+                extension: auto
+            span: auto
+            type: fileupload
+            tab: 'Bloque 1'
+        section_1:
+            label: Texto
+            size: large
+            oc.commentPosition: ''
+            span: auto
+            type: richeditor
+            tab: 'Bloque 1'
+        image_2:
+            label: Imagen
+            oc.commentPosition: ''
+            mode: image
+            useCaption: true
+            thumbOptions:
+                mode: crop
+                extension: auto
+            span: auto
+            type: fileupload
+            tab: 'Bloque 2'
+        section_2:
+            label: Texto
+            size: large
+            oc.commentPosition: ''
+            span: auto
+            type: richeditor
+            tab: 'Bloque 2'
+        image_3:
+            label: Imagen
+            oc.commentPosition: ''
+            mode: image
+            useCaption: true
+            thumbOptions:
+                mode: crop
+                extension: auto
+            span: auto
+            type: fileupload
+            tab: 'Bloque 3'
+        section_3:
+            label: Texto
+            size: large
+            oc.commentPosition: ''
+            span: auto
+            type: richeditor
+            tab: 'Bloque 3'
+        image_4:
+            label: Imagen
+            oc.commentPosition: ''
+            mode: image
+            useCaption: true
+            thumbOptions:
+                mode: crop
+                extension: auto
+            span: auto
+            type: fileupload
+            tab: 'Bloque 4'
+        section_4:
+            label: Texto
+            size: large
+            oc.commentPosition: ''
+            span: auto
+            type: richeditor
+            tab: 'Bloque 4'
+        image_5:
+            label: Imagen
+            oc.commentPosition: ''
+            mode: image
+            useCaption: true
+            thumbOptions:
+                mode: crop
+                extension: auto
+            span: auto
+            type: fileupload
+            tab: 'Bloque 5'
+        section_5:
+            label: Texto
+            size: large
+            oc.commentPosition: ''
+            span: auto
+            type: richeditor
+            tab: 'Bloque 5'
+        image_6:
+            label: Imagen
+            oc.commentPosition: ''
+            mode: image
+            useCaption: true
+            thumbOptions:
+                mode: crop
+                extension: auto
+            span: auto
+            type: fileupload
+            tab: 'Bloque 6'
+        section_6:
+            label: Texto
+            size: large
+            oc.commentPosition: ''
+            span: auto
+            type: richeditor
+            tab: 'Bloque 6'
+        image_7:
+            label: Imagen
+            oc.commentPosition: ''
+            mode: image
+            useCaption: true
+            thumbOptions:
+                mode: crop
+                extension: auto
+            span: auto
+            type: fileupload
+            tab: 'Bloque 7'
+        section_7:
+            label: Texto
+            size: large
+            oc.commentPosition: ''
+            span: auto
+            type: richeditor
+            tab: 'Bloque 7'
+        image_8:
+            label: Imagen
+            oc.commentPosition: ''
+            mode: image
+            useCaption: true
+            thumbOptions:
+                mode: crop
+                extension: auto
+            span: auto
+            type: fileupload
+            tab: 'Bloque 8'
+        section_8:
+            label: Texto
+            size: large
+            oc.commentPosition: ''
+            span: auto
+            type: richeditor
+            tab: 'Bloque 8'

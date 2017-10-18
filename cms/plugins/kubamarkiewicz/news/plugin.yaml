@@ -6,7 +6,7 @@ plugin:
     homepage: ''
 navigation:
     main-menu-item2:
-        label: News
+        label: Novedades
         url: kubamarkiewicz/news/news
         icon: icon-newspaper-o
-        order: '1'
+        order: '2'

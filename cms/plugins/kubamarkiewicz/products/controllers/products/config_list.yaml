@@ -1,0 +1,15 @@
+title: Productos
+modelClass: KubaMarkiewicz\Products\Models\Product
+list: $/kubamarkiewicz/products/models/product/columns.yaml
+recordUrl: 'kubamarkiewicz/products/products/update/:id'
+noRecordsMessage: 'backend::lang.list.no_records'
+showSetup: true
+showCheckboxes: true
+showSorting: 1
+toolbar:
+    buttons: list_toolbar
+    search:
+        prompt: 'backend::lang.list.search_prompt'
+defaultSort:
+    column: sort_order
+    direction: asc

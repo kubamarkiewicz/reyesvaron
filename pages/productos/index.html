@@ -1,0 +1,91 @@
+
+<section ng-repeat="product in productsData" class="productos-product" id="{{ product.name | lowercase }}">
+	
+	<div class="container">
+		
+		<div class="row is-flex main">
+			<div class="col-sm-6 product-image">
+				<img src="{{ product.image_url }}" alt="{{ product.name }}">
+			</div>
+			<div class="col-sm-5 product-description" ng-bind-html="trustAsHtml(product.description)"></div>
+		</div>
+
+
+		<div class="row is-flex section" ng-show="product.image_url_1 || product.section_1 || product.image_url_2 || product.section_2">
+			
+			<div class="col-sm-8">
+				<div class="section-image">
+					<img src="{{ product.image_url_1 }}" alt="">
+				</div>
+				<div class="section-text" ng-bind-html="trustAsHtml(product.section_1)"></div>
+			</div>
+
+			<div class="col-sm-4">
+				<div class="section-image">
+					<img src="{{ product.image_url_2 }}" alt="">
+				</div>
+				<div class="section-text" ng-bind-html="trustAsHtml(product.section_2)"></div>
+			</div>
+
+		</div>
+
+
+		<div class="row is-flex section" ng-show="product.image_url_3 || product.section_3 || product.image_url_4 || product.section_4">
+			
+			<div class="col-sm-8">
+				<div class="section-image">
+					<img src="{{ product.image_url_3 }}" alt="">
+				</div>
+				<div class="section-text" ng-bind-html="trustAsHtml(product.section_3)"></div>
+			</div>
+
+			<div class="col-sm-4">
+				<div class="section-image">
+					<img src="{{ product.image_url_4 }}" alt="">
+				</div>
+				<div class="section-text" ng-bind-html="trustAsHtml(product.section_4)"></div>
+			</div>
+
+		</div>
+
+
+		<div class="row is-flex section" ng-show="product.image_url_5 || product.section_5 || product.image_url_6 || product.section_6">
+			
+			<div class="col-sm-8">
+				<div class="section-image">
+					<img src="{{ product.image_url_5 }}" alt="">
+				</div>
+				<div class="section-text" ng-bind-html="trustAsHtml(product.section_5)"></div>
+			</div>
+
+			<div class="col-sm-4">
+				<div class="section-image">
+					<img src="{{ product.image_url_6 }}" alt="">
+				</div>
+				<div class="section-text" ng-bind-html="trustAsHtml(product.section_6)"></div>
+			</div>
+
+		</div>
+
+
+		<div class="row is-flex section" ng-show="product.image_url_7 || product.section_7 || product.image_url_8 || product.section_8">
+			
+			<div class="col-sm-8">
+				<div class="section-image">
+					<img src="{{ product.image_url_7 }}" alt="">
+				</div>
+				<div class="section-text" ng-bind-html="trustAsHtml(product.section_7)"></div>
+			</div>
+
+			<div class="col-sm-4">
+				<div class="section-image">
+					<img src="{{ product.image_url_8 }}" alt="">
+				</div>
+				<div class="section-text" ng-bind-html="trustAsHtml(product.section_8)"></div>
+			</div>
+
+		</div>
+
+	</div>
+
+</section>
