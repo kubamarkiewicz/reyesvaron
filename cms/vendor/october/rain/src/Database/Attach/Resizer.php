@@ -307,7 +307,7 @@ class Resizer
         $rotatedOriginal = $this->getRotatedOriginal();
 
         // Create the new image
-        imagecopyresampled($imageResized, $rotatedOriginal, 0, 0, 0, 0, $optimalWidth, $optimalHeight, $this->width, $this->height);
+        imagecopyresized($imageResized, $rotatedOriginal, 0, 0, 0, 0, $optimalWidth, $optimalHeight, $this->width, $this->height);
 
         $this->image = $imageResized;
 
