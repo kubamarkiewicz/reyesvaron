@@ -22,7 +22,7 @@ class News extends Controller
 
         if ($result) foreach ($result as $item) {
         	if ($item->image) {
-        		$item->thumb = $item->image->getThumb(300,600);
+        		$item->image_url = $item->image->getThumb(2000,1000);
         	}
         	$return[] = $item;
         }

@@ -3,6 +3,3 @@
 1.0.2:
     - 'Created table kubamarkiewicz_news_news'
     - builder_table_create_kubamarkiewicz_news_news.php
-1.0.3:
-    - 'Updated table kubamarkiewicz_news_news'
-    - builder_table_update_kubamarkiewicz_news_news.php

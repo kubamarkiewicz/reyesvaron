@@ -1,4 +1,11 @@
 columns:
+    date:
+        label: Fecha
+        type: date
+        searchable: true
+        sortable: true
+        format: Y/m/d
+        width: 150px
     name:
         label: Título
         type: text
