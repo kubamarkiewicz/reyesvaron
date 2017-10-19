@@ -86,6 +86,25 @@
 
 		</div>
 
+
+		<div class="row is-flex section" ng-show="product.image_url_9 || product.section_9 || product.image_url_10 || product.section_10">
+			
+			<div class="col-sm-8">
+				<div class="section-image">
+					<img src="{{ product.image_url_9 }}" alt="">
+				</div>
+				<div class="section-text" ng-bind-html="trustAsHtml(product.section_9)"></div>
+			</div>
+
+			<div class="col-sm-4">
+				<div class="section-image">
+					<img src="{{ product.image_url_10 }}" alt="">
+				</div>
+				<div class="section-text" ng-bind-html="trustAsHtml(product.section_10)"></div>
+			</div>
+
+		</div>
+
 	</div>
 
 </section>

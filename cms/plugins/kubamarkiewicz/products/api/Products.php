@@ -10,15 +10,15 @@ class Products extends Controller
 
     public function index()
     {
-        $imagesHeight = 210;
+        $imagesHeight = 420;
         $imageOptions = [
-            'quality' => 80,
-            'extension' => 'png'
+            'quality' => 95,
+            'extension' => 'jpg'
         ];
 
         // Translator::instance()->setLocale($locale);
 
-        $query = Product::with(['image', 'image_1', 'image_2', 'image_3', 'image_4', 'image_5', 'image_6', 'image_7', 'image_8'])
+        $query = Product::with(['image', 'image_1', 'image_2', 'image_3', 'image_4', 'image_5', 'image_6', 'image_7', 'image_8', 'image_9', 'image_10'])
         		->orderBy('sort_order', 'asc');
 
         $result = $query->get(); 
@@ -34,7 +34,9 @@ class Products extends Controller
             $item->image_url_5 = $item->image_5 ? $item->image_5->getThumb(null,$imagesHeight, $imageOptions) : null;
             $item->image_url_6 = $item->image_6 ? $item->image_6->getThumb(null,$imagesHeight, $imageOptions) : null;
             $item->image_url_7 = $item->image_7 ? $item->image_7->getThumb(null,$imagesHeight, $imageOptions) : null;
-        	$item->image_url_8 = $item->image_8 ? $item->image_8->getThumb(null,$imagesHeight, $imageOptions) : null;
+            $item->image_url_8 = $item->image_8 ? $item->image_8->getThumb(null,$imagesHeight, $imageOptions) : null;
+            $item->image_url_9 = $item->image_9 ? $item->image_9->getThumb(null,$imagesHeight, $imageOptions) : null;
+        	$item->image_url_10 = $item->image_10 ? $item->image_10->getThumb(null,$imagesHeight, $imageOptions) : null;
         	$return[] = $item;
         }
 

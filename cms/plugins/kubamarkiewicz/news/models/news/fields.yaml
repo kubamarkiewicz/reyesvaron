@@ -1,11 +1,4 @@
 fields:
-    date:
-        label: Fecha
-        oc.commentPosition: ''
-        mode: date
-        span: auto
-        type: datepicker
-        format: Y/m/d
     published:
         label: Publicado
         span: auto
@@ -26,7 +19,7 @@ fields:
         span: auto
         type: fileupload
     content:
-        label: Contenido
+        label: Texto
         size: giant
         oc.commentPosition: ''
         span: left

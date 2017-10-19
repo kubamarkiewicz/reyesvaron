@@ -18,8 +18,7 @@ app.constant('config', window.config);
 app.config(['$translateProvider', function ($translateProvider) {
 
     $.get({
-        // url: 'cms/api/es/translations',
-        url: 'dummy-api/es/translations.json',
+        url: 'cms/api/es/translations',
         async: false,
         contentType: "application/json",
         dataType: 'json',
@@ -29,10 +28,8 @@ app.config(['$translateProvider', function ($translateProvider) {
     });
     
     $translateProvider.useStaticFilesLoader({
-        // prefix: 'cms/api/',
-        // suffix: '/translations'
-        prefix: 'dummy-api/',
-        suffix: '/translations.json'
+        prefix: 'cms/api/',
+        suffix: '/translations'
     });
     $translateProvider.preferredLanguage('es');
     $translateProvider.useSanitizeValueStrategy(null);
@@ -52,7 +49,7 @@ app.factory('myCustomHandlerFactory', function () {
             translation = element.html();
         }
         
-/*        if (!called[translationID]) {
+        if (!called[translationID]) {
             // call API
             $.post({
                 url     : 'cms/api/es/translations',
@@ -62,7 +59,7 @@ app.factory('myCustomHandlerFactory', function () {
                     translation : translation
                 }
             });
-        }*/
+        }
         
         called[translationID] = true;
 
@@ -85,10 +82,6 @@ app.config(function ($routeProvider, $locationProvider) {
             controller: 'EmpresaController', 
             templateUrl: 'pages/empresa/index.html' 
         })     
-        .when('/contacto', { 
-            controller: 'ContactoController', 
-            templateUrl: 'pages/contacto/index.html' 
-        })        
         .when('/novedades', { 
             controller: 'NovedadesController', 
             templateUrl: 'pages/novedades/index.html' 
@@ -96,7 +89,15 @@ app.config(function ($routeProvider, $locationProvider) {
         .when('/productos', { 
             controller: 'ProductosController', 
             templateUrl: 'pages/productos/index.html' 
-        })    
+        })         
+        .when('/recetas', { 
+            controller: 'RecetasController', 
+            templateUrl: 'pages/recetas/index.html' 
+        })     
+        .when('/contacto', { 
+            controller: 'ContactoController', 
+            templateUrl: 'pages/contacto/index.html' 
+        })       
         .otherwise({ 
             redirectTo: '/' 
         }); 
@@ -186,6 +187,28 @@ app.run(function($rootScope, $sce, $http, $location) {
     .then(function(response) {
         $rootScope.productsData = response.data;
     });
+
+
+    // smooth scroll
+
+/*    $('a[href*="#"]').on('click',function (e) {
+
+        e.preventDefault();
+
+        var target = this.hash;
+        var $target = $(target);
+
+        if (!$target.length) {
+            window.location = this.href;
+            return;
+        }
+
+        $('html, body').stop().animate({
+            'scrollTop': $target.offset().top
+        }, 900, 'swing', function () {
+            window.location.hash = target;
+        });
+    });*/
 
 
 

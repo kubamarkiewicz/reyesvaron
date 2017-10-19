@@ -40,7 +40,8 @@ class Product extends Model
         'section_6',
         'section_7',
         'section_8',
-        'image_1',
+        'section_9',
+        'section_10',
     ];
 
 
@@ -57,5 +58,7 @@ class Product extends Model
         'image_6' => 'System\Models\File',
         'image_7' => 'System\Models\File',
         'image_8' => 'System\Models\File',
+        'image_9' => 'System\Models\File',
+        'image_10' => 'System\Models\File',
     ];
 }

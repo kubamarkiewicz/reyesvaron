@@ -168,3 +168,39 @@ tabs:
             span: auto
             type: richeditor
             tab: 'Bloque 8'
+        image_9:
+            label: Imagen
+            oc.commentPosition: ''
+            mode: image
+            useCaption: true
+            thumbOptions:
+                mode: crop
+                extension: auto
+            span: auto
+            type: fileupload
+            tab: 'Bloque 9'
+        section_9:
+            label: Texto
+            size: large
+            oc.commentPosition: ''
+            span: auto
+            type: richeditor
+            tab: 'Bloque 9'
+        image_10:
+            label: Imagen
+            oc.commentPosition: ''
+            mode: image
+            useCaption: true
+            thumbOptions:
+                mode: crop
+                extension: auto
+            span: auto
+            type: fileupload
+            tab: 'Bloque 10'
+        section_10:
+            label: Texto
+            size: large
+            oc.commentPosition: ''
+            span: auto
+            type: richeditor
+            tab: 'Bloque 10'

@@ -259,6 +259,8 @@ body > header nav a.selected,
 body.page-home > header nav a.home,
 body.page-empresa > header nav a.empresa,
 body.page-novedades > header nav a.novedades,
+body.page-productos > header nav span.productos,
+body.page-recetas > header nav a.recetas,
 body.page-contacto > header nav a.contacto {
 	color: #A0A09F;
 }
