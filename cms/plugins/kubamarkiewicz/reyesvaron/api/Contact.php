@@ -1,8 +1,8 @@
-<?php namespace KubaMarkiewicz\Neotecman\Api;
+<?php namespace KubaMarkiewicz\Reyesvaron\Api;
 
 use Illuminate\Routing\Controller;
 use Input;
-use KubaMarkiewicz\Neotecman\Models\Settings;
+use KubaMarkiewicz\Reyesvaron\Models\Settings;
 
 class Contact extends Controller
 {
@@ -14,7 +14,7 @@ class Contact extends Controller
         $message .= "Asunto: ".Input::get('subject')."\n";
         $message .= "Mensaje: \n".Input::get('message');
 
-        $result = mail(Settings::get('contact_email'), 'Mensaje de web', $message, 'From: info@neotecman.com');
+        $result = mail(Settings::get('contact_email'), 'Mensaje de web', $message, 'From: info@reyesvaron.com');
 
         return response()->json($result, 200, array(), JSON_PRETTY_PRINT);
     }
