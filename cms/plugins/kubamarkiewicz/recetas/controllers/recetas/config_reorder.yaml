@@ -1,0 +1,5 @@
+title: Recetas
+modelClass: KubaMarkiewicz\Recetas\Models\Receta
+nameFrom: name
+toolbar:
+    buttons: reorder_toolbar

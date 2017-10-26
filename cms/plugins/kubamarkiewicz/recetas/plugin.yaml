@@ -1,0 +1,12 @@
+plugin:
+    name: 'kubamarkiewicz.recetas::lang.plugin.name'
+    description: 'kubamarkiewicz.recetas::lang.plugin.description'
+    author: 'Kuba Markiewicz'
+    icon: oc-icon-book
+    homepage: ''
+navigation:
+    main-menu-item:
+        label: Recetas
+        url: kubamarkiewicz/recetas/recetas
+        icon: icon-book
+        order: '5'

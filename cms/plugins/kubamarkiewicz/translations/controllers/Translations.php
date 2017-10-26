@@ -110,7 +110,7 @@ class Translations extends Controller
     public function section_onSave($section)
     {
         Translator::instance()->setLocale(Session::get('translationsLocale'));
-        // dump(post());
+        // dump(post()); exit;
 
         $data = post();
 

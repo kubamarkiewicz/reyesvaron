@@ -1,28 +1,28 @@
 
-section.news {
+section.news .item {
 	background-color: #ece9e4;
 	color: #151B4E;
 	padding-bottom: 150px;;;;
 }
 
-section.news .news-image {
+section.news .item .image {
 	height: calc(100vh - 220px);
 	background-size: cover;
 	background-position: center center;
 }
 
-section.news .container {
+section.news .item .container {
 	max-width: 550px;
 }
 
-section.news .container > h2 {
+section.news .item .container > h2 {
 	font-weight: 300;
 	text-align: center;
 	margin-top: 100px;;;;;
 	font-size: 36px;
 	margin-bottom: 25px;;
 }
-section.news .container > h2::after {
+section.news .item .container > h2::after {
 	content: '';
 	display: block;
 	width: 42px;
@@ -32,7 +32,7 @@ section.news .container > h2::after {
 	margin-right: auto;;;;
 }
 
-section.news .container > main {
+section.news .item .container > main {
 	font-weight: 300;;
 }
 
@@ -42,11 +42,11 @@ section.news .container > main {
 /* mobile */
 @media screen and (max-width: 991px) {
 	
-	section.news .news-image {
+	section.news .item .image {
 		height: calc(100vh - 130px);
 	}
 
-	section.news .container > h2 {
+	section.news .item .container > h2 {
 		margin-top: 190px;;;;;
 	}
 

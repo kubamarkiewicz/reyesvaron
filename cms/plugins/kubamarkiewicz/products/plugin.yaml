@@ -2,11 +2,11 @@ plugin:
     name: 'kubamarkiewicz.products::lang.plugin.name'
     description: 'kubamarkiewicz.products::lang.plugin.description'
     author: 'Kuba Markiewicz'
-    icon: oc-icon-circle
+    icon: oc-icon-cubes
     homepage: ''
 navigation:
     main-menu-item:
         label: Productos
         url: kubamarkiewicz/products/products
-        icon: icon-circle-thin
-        order: '1'
+        icon: icon-cubes
+        order: '4'

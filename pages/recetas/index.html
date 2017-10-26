@@ -1,1 +1,26 @@
-recetas
+
+
+<section id="recetas-header">
+	
+	<div class="container text-center">
+		<h1 translate="pages.recetas.recetas">RECETAS</h1>
+		<h3 translate="pages.recetas.bon-apetit">BON APPETIT</h3>	
+	</div>
+
+</section>
+
+
+
+<section id="recetas">
+
+
+	<div class="image" ng-repeat-start="item in recetasData" style="background-image:url('{{ item.image_url }}')"></div>
+
+	<div class="receta" ng-repeat-end>
+		<div class="wrap">
+			<h2>{{ item.name }}</h2>
+			<main ng-bind-html="trustAsHtml(item.description)"></main>
+		</div>
+	</div>
+
+</section>

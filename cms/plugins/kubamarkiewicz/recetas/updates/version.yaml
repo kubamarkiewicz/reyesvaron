@@ -1,0 +1,8 @@
+1.0.1:
+    - 'Initialize plugin.'
+1.0.2:
+    - 'Created table kubamarkiewicz_recetas_recetas'
+    - builder_table_create_kubamarkiewicz_recetas_recetas.php
+1.0.3:
+    - 'Updated table kubamarkiewicz_recetas_recetas'
+    - builder_table_update_kubamarkiewicz_recetas_recetas.php

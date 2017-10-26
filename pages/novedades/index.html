@@ -1,11 +1,15 @@
 
-<section class="news" ng-repeat="item in newsData">
-	
-	<div class="news-image" style="background-image:url('{{ item.image_url }}')"></div>
+<section class="news">
 
-	<div class="container">
-		<h2>{{ item.name }}</h2>
-		<main ng-bind-html="trustAsHtml(item.content)"></main>
+	<div class="item" ng-repeat="item in newsData">
+	
+		<div class="image" style="background-image:url('{{ item.image_url }}')"></div>
+
+		<div class="container">
+			<h2>{{ item.name }}</h2>
+			<main ng-bind-html="trustAsHtml(item.content)"></main>
+		</div>
+
 	</div>
 
 </section>

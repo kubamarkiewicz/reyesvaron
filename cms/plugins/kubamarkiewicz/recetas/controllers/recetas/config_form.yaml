@@ -1,0 +1,10 @@
+name: Recetas
+modelClass: KubaMarkiewicz\Recetas\Models\Receta
+form: $/kubamarkiewicz/recetas/models/receta/fields.yaml
+defaultRedirect: kubamarkiewicz/recetas/recetas
+create:
+    redirect: 'kubamarkiewicz/recetas/recetas/update/:id'
+    redirectClose: kubamarkiewicz/recetas/recetas
+update:
+    redirect: kubamarkiewicz/recetas/recetas
+    redirectClose: kubamarkiewicz/recetas/recetas

@@ -1,11 +1,21 @@
-app.controller('RecetasController', function($scope, $rootScope, $http, $routeParams, config) {  
+app.controller('RecetasController', function($scope, $rootScope, $http, $routeParams, config, ParallaxService) {  
 
-    $(function() {
+    $scope.recetasData = null;
+    
+    $scope.loadRecetasData = function()
+    {
+        $http({
+            method  : 'GET',
+            url     : config.api.urls.getRecetas
+        })
+        .then(function(response) {
+            $scope.recetasData = response.data;
+        });
+    }
+    $scope.loadRecetasData();
 
 
-			
-	});
-
+    ParallaxService.add($('section#recetas-header'), true);
 
 
 });

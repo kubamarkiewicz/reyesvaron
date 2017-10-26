@@ -1,0 +1,26 @@
+fields:
+    name:
+        label: Titulo
+        oc.commentPosition: ''
+        span: auto
+        type: text
+    published:
+        label: Publicado
+        span: auto
+        type: switch
+    description:
+        label: Descripción
+        size: giant
+        oc.commentPosition: ''
+        span: left
+        type: richeditor
+    image:
+        label: Imagen
+        oc.commentPosition: ''
+        mode: image
+        useCaption: true
+        thumbOptions:
+            mode: crop
+            extension: auto
+        span: right
+        type: fileupload

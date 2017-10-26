@@ -1,0 +1,14 @@
+title: Recetas
+modelClass: KubaMarkiewicz\Recetas\Models\Receta
+list: $/kubamarkiewicz/recetas/models/receta/columns.yaml
+recordUrl: 'kubamarkiewicz/recetas/recetas/update/:id'
+noRecordsMessage: 'backend::lang.list.no_records'
+showSetup: true
+showCheckboxes: true
+toolbar:
+    buttons: list_toolbar
+    search:
+        prompt: 'backend::lang.list.search_prompt'
+defaultSort:
+    column: sort_order
+    direction: asc

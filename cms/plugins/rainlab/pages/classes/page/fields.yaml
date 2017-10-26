@@ -1,0 +1,39 @@
+# ===================================
+#  Field Definitions
+# ===================================
+
+fields:
+    viewBag[title]:
+        span: left
+        label: rainlab.pages::lang.editor.title
+        placeholder: rainlab.pages::lang.editor.new_title
+        attributes:
+            default-focus: 1
+
+    viewBag[url]:
+        span: right
+        placeholder: /
+        label: rainlab.pages::lang.editor.url
+        preset:
+            field: viewBag[title]
+            type: url
+            prefixInput: input[data-parent-url]
+
+    toolbar:
+        type: partial
+        path: page_toolbar
+        cssClass: collapse-visible
+
+tabs:
+    stretch: true
+    fields:
+
+        viewBag[meta_title]:
+            tab: cms::lang.editor.meta
+            label: cms::lang.editor.meta_title
+
+        viewBag[meta_description]:
+            tab: cms::lang.editor.meta
+            label: cms::lang.editor.meta_description
+            type: textarea
+            size: tiny
