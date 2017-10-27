@@ -3,7 +3,7 @@ app.controller('HomeController', function($scope, $rootScope, $http, $routeParam
 	$(function() {
 
 		$('#homeCarousel').carousel({
-			interval: 1500
+			interval: 3000
 		});
 
 	});

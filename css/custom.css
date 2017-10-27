@@ -161,6 +161,10 @@ body.loading > footer {
     height: 10px;;;
 }
 
+.carousel-inner > .item {
+    transition: transform 1.2s ease-in-out;
+}
+
 .alert {
 	border-radius: 0;
 }

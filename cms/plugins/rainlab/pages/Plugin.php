@@ -100,6 +100,7 @@ class Plugin extends PluginBase
                         'permissions' => ['rainlab.pages.access_snippets']
                     ]
                 ]
+                
             ]
         ];
     }

@@ -8,8 +8,8 @@
 
     <title>Reyes Varón</title>
     <meta name="description" content="muy pronto / coming soon Reyes y Varón ahumados@reyesyvaron.com">
-    <base href="/2017/reyesvaron/www/">
-    <!-- <base href="/"> -->
+    <!-- <base href="/2017/reyesvaron/www/"> -->
+    <base href="/">
 
     <!-- Le styles -->
     <link href="js/node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -40,10 +40,10 @@
 				<span class="productos">
                     <span translate="menu.productos">PRODUCTOS</span>
                     <span class="submenu">
-                        <a ng-repeat="product in productsData" href="productos#{{ product.name | lowercase }}" ng-click="closeMenu()">{{ product.name }}</a>
+                        <a ng-repeat="product in productsData" href="productos#{{ product.url }}">{{ product.name }}</a>
                     </span>
                 </span>
-                <a href="recetas" class="recetas" translate="menu.recetas">RECETAS</a>
+                <!-- <a href="recetas" class="recetas" translate="menu.recetas">RECETAS</a> -->
                 <a href="contacto" class="contacto" translate="menu.contacto">CONTACTO</a>
                 <span class="social">
                     <a href="#" target="_blank"><img src="images/social-linkedin.png" alt="LinkedIn"></a>

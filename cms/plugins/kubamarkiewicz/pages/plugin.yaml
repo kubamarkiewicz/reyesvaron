@@ -1,0 +1,6 @@
+plugin:
+    name: 'kubamarkiewicz.pages::lang.plugin.name'
+    description: 'kubamarkiewicz.pages::lang.plugin.description'
+    author: 'Kuba Markiewicz'
+    icon: oc-icon-files-o
+    homepage: ''

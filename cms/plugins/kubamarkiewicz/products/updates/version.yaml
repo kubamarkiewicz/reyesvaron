@@ -21,3 +21,6 @@
 1.0.8:
     - 'Updated table kubamarkiewicz_products_products'
     - builder_table_update_kubamarkiewicz_products_products_6.php
+1.0.9:
+    - 'Updated table kubamarkiewicz_products_products'
+    - builder_table_update_kubamarkiewicz_products_products_7.php

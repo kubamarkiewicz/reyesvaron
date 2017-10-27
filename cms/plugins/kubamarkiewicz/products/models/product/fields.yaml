@@ -1,8 +1,13 @@
 fields:
     name:
-        label: Nombre del producto
+        label: 'Nombre del producto'
         oc.commentPosition: ''
         span: left
+        type: text
+    url:
+        label: URL
+        oc.commentPosition: ''
+        span: auto
         type: text
 tabs:
     fields:
@@ -16,14 +21,14 @@ tabs:
                 extension: auto
             span: auto
             type: fileupload
-            tab: Informacion principal
+            tab: 'Informacion principal'
         description:
             label: Descripción
             size: large
             oc.commentPosition: ''
             span: auto
             type: richeditor
-            tab: Informacion principal
+            tab: 'Informacion principal'
         image_1:
             label: Imagen
             oc.commentPosition: ''

@@ -36,7 +36,7 @@ app.controller('ContactoController', function($scope, $rootScope, $http, $routeP
 
     // Google Maps
 
-    var coordinates = new google.maps.LatLng(41.289453,1.4217343);
+    var coordinates = new google.maps.LatLng(41.289427,1.5617157);
 
     var myOptions = {
         zoom: 13,
