@@ -1,10 +1,11 @@
-app.controller('ProductosController', function($scope, $rootScope, $http, $routeParams, config, $anchorScroll) {  
+app.controller('ProductosController', function($scope, $rootScope, $http, $routeParams, config, $anchorScroll, $timeout) {  
 
-	$anchorScroll();
-	
-	setTimeout(function(){ 
-		$anchorScroll();
-	},300);
+    $scope.onProductsRendered = function() 
+    {
+        $timeout(function(){
+            $anchorScroll();  
+        });
+    }
 
 
 	angular.element(document).ready(function() {

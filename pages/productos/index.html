@@ -1,5 +1,9 @@
 
-<section ng-repeat="product in productsData" class="productos-product" id="{{ product.url }}">
+<section 
+	ng-repeat="product in productsData" 
+	class="productos-product" 
+	id="{{ product.url }}" 
+	ng-init="$last && onProductsRendered()">
 	
 	<div class="container">
 		

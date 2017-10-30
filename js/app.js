@@ -137,6 +137,8 @@ app.run(function($rootScope, $sce, $http, $location) {
         })
         .addClass("page-"+$rootScope.pageSlug);
 
+        $rootScope.setMetadata();
+
     });
 
     $rootScope.$on('$routeChangeSuccess', function() {
@@ -189,26 +191,41 @@ app.run(function($rootScope, $sce, $http, $location) {
     });
 
 
-    // smooth scroll
 
-/*    $('a[href*="#"]').on('click',function (e) {
 
-        e.preventDefault();
 
-        var target = this.hash;
-        var $target = $(target);
-
-        if (!$target.length) {
-            window.location = this.href;
-            return;
-        }
-
-        $('html, body').stop().animate({
-            'scrollTop': $target.offset().top
-        }, 900, 'swing', function () {
-            window.location.hash = target;
+    // load pages data
+    $rootScope.pagesData = [];
+    
+    $rootScope.loadPagesData = function()
+    {
+        $http({
+            method  : 'GET',
+            url     : config.api.urls.getPages
+        })
+        .then(function(response) {
+            $rootScope.pagesData = response.data;
+            $rootScope.setMetadata();
         });
-    });*/
+    }
+    $rootScope.loadPagesData();
+
+
+
+    // set meta data
+    $rootScope.setMetadata = function()
+    {
+        var pageSlug = $rootScope.pageSlug;
+        if (pageSlug == 'home') {
+            pageSlug = '';
+        }
+        var page = $rootScope.pagesData[pageSlug];
+
+        if (page) {
+            document.title = page.meta_title;
+            document.querySelector('meta[name=description]').setAttribute('content', page.meta_description);
+        }
+    }
 
 
 
