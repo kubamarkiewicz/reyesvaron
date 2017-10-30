@@ -3,20 +3,18 @@
 use Illuminate\Routing\Controller;
 use KubaMarkiewicz\Pages\Models\Page;
 
-class Share extends Controller
+class Metadata extends Controller
 {
 
-    public function index()
+    public function index($url, $locale = 'es')
     {
-
+        // echo $url;
+        // echo "<pre>";
         // print_r($_SERVER);
 
-        $pageUrl = 'http://'.$_SERVER['SERVER_NAME'].$_SERVER['REQUEST_URI'];
+        $pageUrl = 'http://'.$_SERVER['HTTP_HOST'].'/'.$url;
 
-        $parts = explode('/', $_SERVER['REQUEST_URI']);
-        $slug = end($parts);
-
-        $query = Page::where('slug', $slug);
+        $query = Page::where('slug', $url);
 
         $page = $query->first(); 
 
@@ -33,8 +31,8 @@ class Share extends Controller
     <meta property="og:type"          content="website">
     <meta property="og:title"         content="<?=$page->meta_title?>">
     <meta property="og:description"   content="<?=$page->description?>">
-    <meta property="og:image"         content="">
-    <meta property="fb:app_id"        content="">
+    <!-- <meta property="og:image"         content=""> -->
+    <!-- <meta property="fb:app_id"        content=""> -->
 </head>
 <body></body>
 </html>
