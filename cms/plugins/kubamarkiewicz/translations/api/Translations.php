@@ -4,13 +4,14 @@ use Illuminate\Routing\Controller;
 use KubaMarkiewicz\Translations\Models\Translation;
 use RainLab\Translate\Classes\Translator;
 use DB;
+use Input;
 
 class Translations extends Controller
 {
 
-    public function index($locale)
+    public function index()
     {
-        Translator::instance()->setLocale($locale);
+        Translator::instance()->setLocale(Input::get('lang'));
 
         $query = Translation::orderBy('code', 'asc');
 

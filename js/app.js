@@ -17,28 +17,36 @@ app.constant('config', window.config);
 
 app.config(['$translateProvider', function ($translateProvider) {
 
+    // try to find out preferred language by yourself
+    // $translateProvider.determinePreferredLanguage();
+
+    // choose language form local storage or default
+
+    if (!window.localStorage.locale) {
+        window.localStorage.locale = config.defaultLanguage;
+    }
+    $translateProvider.preferredLanguage(window.localStorage.locale);
+
+    // load default language Synchronously
     $.get({
-        url: 'cms/api/es/translations',
+        url: config.api.getTranslations,
+        data: ['lang', window.localStorage.locale],
         async: false,
         contentType: "application/json",
         dataType: 'json',
         success: function (json) {
-            $translateProvider.translations('es', json);
+            $translateProvider.translations(window.localStorage.locale, json);
         }
     });
     
-    $translateProvider.useStaticFilesLoader({
-        prefix: 'cms/api/',
-        suffix: '/translations'
-    });
-    $translateProvider.preferredLanguage('es');
+    $translateProvider.useUrlLoader(config.api.urls.getTranslations);
     $translateProvider.useSanitizeValueStrategy(null);
     // tell angular-translate to use your custom handler
-    $translateProvider.useMissingTranslationHandler('myCustomHandlerFactory');
+    $translateProvider.useMissingTranslationHandler('missingTranslationHandlerFactory');
 }]);
 
-// define custom handler
-app.factory('myCustomHandlerFactory', function () {
+// define missing Translation Handler
+app.factory('missingTranslationHandlerFactory', function () {
     var called = [];
     return function (translationID) {
         // use last element from code as default translation
@@ -52,7 +60,7 @@ app.factory('myCustomHandlerFactory', function () {
         if (!called[translationID]) {
             // call API
             $.post({
-                url     : 'cms/api/es/translations',
+                url     : config.api.missingTranslation,
                 data    : {
                     code : translationID,
                     type : element.attr('translate-type'),
@@ -114,7 +122,7 @@ app.config(['$httpProvider', function($httpProvider) {
 ]);
 
 
-app.run(function($rootScope, $sce, $http, $location) {
+app.run(function($rootScope, $sce, $http, $location, $translate, $window, $route) {
 
     $("body").removeClass('loading');
 
@@ -178,17 +186,50 @@ app.run(function($rootScope, $sce, $http, $location) {
     }
 
 
+    // choose language
+    $rootScope.setLanguage = function(language)
+    {
+        // save laguange chioce in local storage
+        $rootScope.language = $window.localStorage.language = language;
+        $translate.use(language);
+        $('html').attr('lang', language);
+        $('body > header nav span.lang a').removeClass('selected');
+        $('body > header nav span.lang a[data-language=' + language + ']').addClass('selected');
+    }
+    $rootScope.setLanguage($window.localStorage.language);
+
+
+
+    // language menu
+    $('body > header nav span.lang a').click(function(){
+        $rootScope.setLanguage($(this).data('language'));
+        // location.reload();
+        $route.reload();
+        $rootScope.loadProductsData();
+        $rootScope.loadPagesData();
+        $rootScope.setMetadata();
+    });
+
+
+
 
     // load products
     $rootScope.productsData = null;
-    
-    $http({
-        method  : 'GET',
-        url     : config.api.urls.getProducts
-    })
-    .then(function(response) {
-        $rootScope.productsData = response.data;
-    });
+    $rootScope.loadProductsData = function() 
+    {
+        $http({
+            method  : 'GET',
+            url     : config.api.urls.getProducts,
+            params  : {
+                'lang': $rootScope.language
+            }
+        })
+        .then(function(response) {
+            $rootScope.productsData = response.data;
+        });
+    }
+    $rootScope.loadProductsData();
+
 
 
 
@@ -196,12 +237,14 @@ app.run(function($rootScope, $sce, $http, $location) {
 
     // load pages data
     $rootScope.pagesData = [];
-    
     $rootScope.loadPagesData = function()
     {
         $http({
             method  : 'GET',
-            url     : config.api.urls.getPages
+            url     : config.api.urls.getPages,
+            params  : {
+                'lang': $rootScope.language
+            }
         })
         .then(function(response) {
             $rootScope.pagesData = response.data;
@@ -226,6 +269,9 @@ app.run(function($rootScope, $sce, $http, $location) {
             document.querySelector('meta[name=description]').setAttribute('content', page.meta_description);
         }
     }
+
+
+
 
 
 

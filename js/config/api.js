@@ -3,6 +3,8 @@
 
 window.config = window.config || {};
 
+window.config.defaultLanguage = 'es';
+
 window.config.api = {
 
 	"urls" : {
@@ -10,7 +12,9 @@ window.config.api = {
         "getProducts"           : "cms/api/products",
         "getNews"           	: "cms/api/news",
         "getRecetas"           	: "cms/api/recetas",
-        "sendContact"          	: "cms/api/contact"
+        "sendContact"          	: "cms/api/contact",
+        "getTranslations"		: "cms/api/translations",
+        "missingTranslation"	: "cms/api/translation"
 	}
 
 }

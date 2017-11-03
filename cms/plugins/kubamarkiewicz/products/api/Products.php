@@ -10,6 +10,8 @@ class Products extends Controller
 
     public function index()
     {
+        Translator::instance()->setLocale(Input::get('lang'));
+
         $imagesHeight = 420;
         $imageOptions = [
             'quality' => 95,
